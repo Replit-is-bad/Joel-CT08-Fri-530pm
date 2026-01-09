@@ -13,7 +13,7 @@ Ascending is from smallest to biggest​
 ## Task 2: Bubble Sort
 Using the bubble sort algorithm, sort the following numbers in ascending order.​
 
-- 9, 6, 3, 25, 21, 8, 23, 1, 17, 14​
+-  18, 22, 23, 26, 27, 34, 36, 37, 44, 47​
 - 37, 39, 41, 29, 9, 25, 43, 21, 3, 42
 - 24, 8, 10, 22, 45, 34, 28, 39, 3, 32​
 - 15, 21, 8, 32, 46, 44, 37, 20, 27, 22​
