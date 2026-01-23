@@ -31,15 +31,56 @@ print()
 for item, price in menu.items():
     print(f"{item}: ${price:.2f}")
 
+
 print()
 print('<---------------->')
-order = input('What would you like to order? y/n')
+
+orderhis = {}
+
+order = ''
 
 while order != 'n':
-    if order in menu:
-        print(f"Great! {order} costs ${menu[order]:.2f}.")
+    order = input('What would you like to order?')
+    if order != 'no more':
         
-    else:
-        print(order + " is not on the menu.")
+        if order in menu:
+            print(f"Great! {order} costs ${menu[order]:.2f}.")
+            print("*"*40)
+            check = input('would u like to add it to ur order? Y/N ')
+            if check == "y" :
+                orderhis[order] = menu[order]
+                print()
+                print(order + ' has been added.')
+                print()
+                print(orderhis)
+            elif check == 'n':
+                print(order + ' not added')
+            else:
+                print(' *' + check + '* NOT FOUND')
     
-order = input('What would you like to order? y/n')
+        
+        else:
+            print(order + " is not on the menu. ")
+            print("*"*40)
+    elif order == 'no more':
+        break
+
+order_total = 0 
+for order in orderhis.values():
+    order_total += order
+
+print('<------ORDER------>')
+print()
+for item, price in orderhis.items():
+    print(f"{item}: ${price:.2f}")
+
+
+print()
+print('<---------------->')
+print('TOTAL : $' + str(order_total))
+
+        
+        
+
+    
+
