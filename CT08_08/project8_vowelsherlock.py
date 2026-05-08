@@ -1,9 +1,8 @@
 import os
 
-filepath = os.getcwd()
-sherlock_path = os.path.join(filepath, "sherlock.txt")
+sherlock_path = os.path.join(os.getcwd(), "sherlock.txt")
 
-if os .path.exists(sherlock_path):
+if os.path.exists(sherlock_path):
     with open("sherlock.txt", "r") as file:
         content = file.read()
         print(f"Total Characters : {len(content)}")
